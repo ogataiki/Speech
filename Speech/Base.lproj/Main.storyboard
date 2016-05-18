@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Speech" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-fl-Gbm">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pmc-b0-FzR"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pyO-iA-a0r"/>
+                                    <barButtonItem systemItem="trash" id="2n0-Qg-122">
+                                        <connections>
+                                            <action selector="trashText:" destination="BYZ-38-t0r" id="khF-VD-lGc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YX4-dK-BW2"/>
+                                    <barButtonItem systemItem="play" id="G8V-6M-vEU">
+                                        <connections>
+                                            <action selector="playText:" destination="BYZ-38-t0r" id="z3O-k4-WNG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NDg-oY-pZW"/>
+                                    <barButtonItem systemItem="pause" id="2rr-eM-Lse">
+                                        <connections>
+                                            <action selector="pauseText:" destination="BYZ-38-t0r" id="SJJ-IA-Dys"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RZ9-yq-Z7k"/>
+                                    <barButtonItem systemItem="stop" id="xtP-kK-Rg0">
+                                        <connections>
+                                            <action selector="stopText:" destination="BYZ-38-t0r" id="HRW-bs-RWJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="x3L-xZ-n1O"/>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="喋らせたい内容を入力してください。" translatesAutoresizingMaskIntoConstraints="NO" id="YXC-GS-62L">
+                                <rect key="frame" x="0.0" y="20" width="600" height="444"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="err-SS-Dsg">
+                                <rect key="frame" x="84" y="510" width="498" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TsM-kN-ISn"/>
+                                </constraints>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-h3-40l">
+                                <rect key="frame" x="84" y="472" width="498" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pdF-ww-IHb"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="声の高さ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWx-LJ-yBd">
+                                <rect key="frame" x="20" y="476" width="58" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="5uN-KW-Xrn"/>
+                                    <constraint firstAttribute="height" constant="21" id="O4F-DU-lHK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="話す速さ" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-M6-r5W">
+                                <rect key="frame" x="20" y="514" width="58" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="C9Y-pP-Lcp"/>
+                                    <constraint firstAttribute="width" constant="58" id="PWd-cA-CdK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YXC-GS-62L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="70X-pG-naF"/>
+                            <constraint firstAttribute="trailing" secondItem="KTM-h3-40l" secondAttribute="trailing" constant="20" id="F2E-Di-Vz8"/>
+                            <constraint firstAttribute="trailing" secondItem="err-SS-Dsg" secondAttribute="trailing" constant="20" id="H0l-EN-Fbt"/>
+                            <constraint firstItem="RjC-M6-r5W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Jir-aU-pad"/>
+                            <constraint firstItem="7e7-fl-Gbm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LWd-3Q-kGY"/>
+                            <constraint firstItem="7e7-fl-Gbm" firstAttribute="top" secondItem="err-SS-Dsg" secondAttribute="bottom" constant="16" id="R4r-Dd-lbi"/>
+                            <constraint firstItem="7e7-fl-Gbm" firstAttribute="top" secondItem="RjC-M6-r5W" secondAttribute="bottom" constant="21" id="RhD-Fo-f4l"/>
+                            <constraint firstItem="YXC-GS-62L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SjS-Dz-jEQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7e7-fl-Gbm" secondAttribute="bottom" id="UYh-Lc-46N"/>
+                            <constraint firstItem="KTM-h3-40l" firstAttribute="top" secondItem="YXC-GS-62L" secondAttribute="bottom" constant="8" id="Vb5-Lu-oYD"/>
+                            <constraint firstAttribute="trailing" secondItem="7e7-fl-Gbm" secondAttribute="trailing" id="bsu-9d-vYz"/>
+                            <constraint firstItem="err-SS-Dsg" firstAttribute="leading" secondItem="RjC-M6-r5W" secondAttribute="trailing" constant="8" id="eDu-jb-Ghw"/>
+                            <constraint firstAttribute="trailing" secondItem="YXC-GS-62L" secondAttribute="trailing" id="mV2-a7-7yt"/>
+                            <constraint firstItem="KTM-h3-40l" firstAttribute="leading" secondItem="aWx-LJ-yBd" secondAttribute="trailing" constant="8" id="pRL-Bu-PKy"/>
+                            <constraint firstItem="7e7-fl-Gbm" firstAttribute="top" secondItem="KTM-h3-40l" secondAttribute="bottom" constant="54" id="rIG-xB-vnE"/>
+                            <constraint firstItem="7e7-fl-Gbm" firstAttribute="top" secondItem="aWx-LJ-yBd" secondAttribute="bottom" constant="59" id="utw-Kv-1nQ"/>
+                            <constraint firstItem="aWx-LJ-yBd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zwf-lf-vt8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="2rr-eM-Lse" id="U8Y-bA-54Q"/>
+                        <outlet property="pitchSlider" destination="KTM-h3-40l" id="Cbm-b5-sVB"/>
+                        <outlet property="playButton" destination="G8V-6M-vEU" id="ZbJ-s4-ZBI"/>
+                        <outlet property="speedSlider" destination="err-SS-Dsg" id="dOd-Nv-aJs"/>
+                        <outlet property="stopButton" destination="xtP-kK-Rg0" id="Jzw-Lg-A3P"/>
+                        <outlet property="textView" destination="YXC-GS-62L" id="ZiF-BE-7hg"/>
+                        <outlet property="trashButton" destination="2n0-Qg-122" id="IXP-ag-Tv8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="349"/>
+        </scene>
+    </scenes>
+</document>
